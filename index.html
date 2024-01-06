@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>AMilla Ingenieros</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href='carousel.css'>
+        <script type="text/javascript" src='main.js'></script>
+        <script type="text/javascript" src='carousel.js'></script>
+        <link rel='stylesheet' type='text/css' media='screen' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="slideout-menu">
+            <ul>
+                <li>
+                    <a href="javascript: scrollToSectionMobile('#about-us-link')">¿Quienes somos?</a>
+                </li>
+                <li>
+                    <a href="javascript: scrollToSectionMobile('#services-link')">Nuestros servicios</a>
+                </li>
+                <li>
+                    <a href="javascript: scrollToSectionMobile('#clients-link')">Nuestros proyectos</a>
+                </li>
+                <li>
+                    <a href="javascript: scrollToSectionMobile('#contact-us-link')">Contáctenos</a>
+                </li>
+            </ul>
+        </div>
+        <nav>
+            <div class="container">
+                <div id="logo">
+                    <a href="#">
+                        <img src="img/logo.png" alt="Logo AMilla Ingenieros">
+                    </a>
+
+                    <img src="img/iso_9001.png" alt="ISO 9001" class="certifications">
+                    <img src="img/iso_14001.png" alt="ISO 14001" class="certifications">
+                    <img src="img/iso_45001.png" alt="ISO 45001" class="certifications">
+                </div>
+                <div id="menu-icon">
+                    <a href="javascript: toggleMobileMenu()"> 
+                        <i class="fas fa-bars fa-xl" id="bars"></i>
+                        <i class="fas fa-times fa-xl" id="times" style="display: none;"></i>
+                    </a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="javascript: scrollToSection('#about-us-link')">¿Quienes somos?</a>
+                    </li>
+                    <li>
+                        <a href="javascript: scrollToSection('#services-link')">Nuestros servicios</a>
+                    </li>
+                    <li>
+                        <a href="javascript: scrollToSection('#clients-link')">Nuestros proyectos</a>
+                    </li>
+                    <li>
+                        <a href="javascript: scrollToSection('#contact-us-link')">Contáctenos</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="bar"></div>
+        </nav>
+        <div id="banner">
+            <div id="container">
+                <h1>Diseñando soluciones<br>en energía eléctrica</h1>
+            </div>
+        </div>
+        <div id="#about-us-link"></div>
+        <main>
+            <section id="about-us">
+                <div id="information">
+                    <div id="left">
+                        <h2>
+                            ¿Quiénes somos?
+                        </h2>
+                    </div>
+                    <div id="right">
+                        <p>
+                            Somos una firma de consultoría especializada en energía eléctrica, enfocada en el desarrollo de proyectos relacionados con la transmisión y distribución de la energía eléctrica. Nuestra experiencia y conocimientos nos convierten en el socio ideal para soluciones energéticas de vanguardia.
+                        </p>
+                    </div>
+                </div>
+                <div id="vision-mision">
+                    <div id="vision">
+                        <h2>
+                            Visión
+                        </h2>
+                        <p>
+                            Convertirnos en una empresa consultora líder especializada en ingeniería eléctrica, participando en proyectos de importancia nacional e internacional, gracias a nuestra experiencia y preparación de alto nivel.
+                        </p>
+                    </div>
+                    <div id="mision">
+                        <h2>
+                            Misión
+                        </h2>
+                        <p>
+                            Nuestra misión es contribuir al éxito de nuestros clientes, desarrollando sus proyectos con calidad, garantía y con total respeto al medio ambiente, promoviendo la innovación y la mejora continua en beneficio de todas las partes interesadas.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <div id="#services-link"> </div>
+            <section id="services">
+                
+                <h2 class="section-heading">Nuestros servicios</h2>
+                
+                <div class="container">
+                    <div id="services-t1" class="card type-1">
+                        <h3>
+                            Estudios de<br>Ingeniería<br>Conceptual
+                        </h3>
+                    </div>
+                    <div id="services-t2" class="card type-2">
+                        <h3>
+                            Ingeniería Básica<br>e Ingeniería<br>de Detalle
+                        </h3>
+                    </div>
+                    <div id="services-t3" class="card type-4">
+                        <h3>
+                            Estudios<br>Eléctricos y<br>Mediciones
+                        </h3>
+                    </div>
+                    <div id="services-t4" class="card type-3">
+                        <h3>
+                            Supervisión de<br>Obra
+                        </h3>
+                    </div>
+                </div>
+            </section>
+
+            <section id="clients">
+                
+                <div id="#clients-link"> </div>
+
+                <h2 class="section-heading">Nuestros clientes</h2>
+
+                <div class="container">
+                    <div id="slider" class="slider">
+                        <div class="wrapper">
+                          <div id="slides" class="slides">
+                            <span class="slide"><img src="img/poderosa_logo.svg" class="logo-3"></span>
+                            <span class="slide"><img src="img/corona_logo.png" class="logo-1"></span>
+                            <span class="slide"><img src="img/novum_solar.png" class="logo-1"></span>
+                            <span class="slide"><img src="img/ege_santa_ana.png" class="logo-1"></span>
+                            <span class="slide"><img src="img/afry_logo.svg" class="logo-3"></span>
+                            <span class="slide"><img src="img/shahuindo.jpg" class="logo-1"></span>
+                            <span class="slide"><img src="img/cerro_pasco_logo.jpg" class="logo-1"></span>
+                            <span class="slide"><img src="img/araza_logo.webp" class="logo-2"></span>
+                            <span class="slide"><img src="img/logo-unacem.jpg" class="logo-2"></span>
+                            <span class="slide"><img src="img/edf_logo.jpg" class="logo-2"></span>
+                            <span class="slide"><img src="img/as_ig_logo.png" class="logo-3"></span>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </section>
+
+            <div id="#contact-us-link"> </div>
+
+            <section id="contact-us">
+
+                <h2 class="section-heading">Contáctenos</h2>
+
+                <div class="container">
+                    <div id="information">
+                        <ul>
+                            <li>
+                                <h3>Oficina</h3>
+                                <label>Lima, Perú</label>
+                            </li>
+                            <li>
+                                <h3>Correo electronico</h3>
+                                <label>asistente@aming.com.pe</label>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/amillaingenieros/" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="form" style="display: none">
+                        <form id="contact-form">
+                            <ul>
+                                <li>
+                                    <br><br>
+                                </li>
+                                <li>
+                                    <label for="fullname">Nombre y Apellidos</label>
+                                    <input id="fullname" type="text" placeholder="Nombre y Apellidos" required>
+                                </li>
+                                <li class="dual">
+                                    <div>
+                                        <label for="email">Mail</label>
+                                        <input id="email" type="email" placeholder="mail@mail.com" required>
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="phone">Teléfono</label>
+                                        <input id="phone" type="tel" placeholder="999 999 999" required>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="message">Mensaje</label>
+                                    <textarea id="message" placeholder="Escribe tu mensaje" required></textarea>
+                                </li>
+                                <li>
+                                    <button type="submit" onclick="submitForm()">Enviar</button>
+                                </li>
+                                <li>
+                                    <span id="answer" style="opacity: 0; transition: .5s;">El mensaje fue enviado. <br> Nos pondremos en contacto con usted pronto.</span>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                
+            </section>
+
+            <footer>
+                <div id="bar"></div>
+                <div class="container">
+                    <img src="img/logo.png" alt="Logo AMilla Ingenieros">       
+                    <img src="img/iso_9001.png" alt="ISO 9001" class="certifications">
+                    <img src="img/iso_14001.png" alt="ISO 14001" class="certifications">
+                    <img src="img/iso_45001.png" alt="ISO 45001" class="certifications">
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>

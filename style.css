@@ -1,0 +1,1122 @@
+:root {
+    --dark-blue: #1b1b5e;
+    --light-blue: #4e55af;
+    --dark-blue-alpha-0: rgba(27, 27, 94, 0.95);
+    --dark-blue-alpha-1: rgba(27, 27, 94, 0.8);
+    --dark-blue-alpha-2: rgba(27, 27, 94, 0.7);
+    --shadow-general: -4px 8px 40px 0px rgba(79, 79, 79, 0.25);
+    --shadow-banner: -4px 8px 30px 0px rgba(83, 83, 77, 0.3);
+    --shadow-white: -4px 0px 40px 60px rgba(255, 255, 255, 1);
+    --line-height: 1.5;
+    --color-division: linear-gradient(90deg, rgba(27,27,94,1) 0%, rgba(27,27,94,1) 50%, rgba(78,85,175,1) 50%);
+    --banner-text-size: 45px;
+    --text-size-big: 30px;
+    --text-size-normal: 18px;
+    --text-size-small: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    height: 100%;
+    background-image: url('img/bg.png');
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: var(--banner-text-size);
+    color: var(--dark-blue);
+    text-align: center;
+    margin: 0;
+}
+
+.section-heading {
+    font-size: var(--text-size-big);
+    font-weight: bold;
+    padding: 0 0 0 5em;
+    position: relative;
+    line-height: 0.75;
+}
+
+.section-heading::before {
+    width: 120px;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--light-blue);
+    content: "";
+    z-index: 0;
+}
+
+p {
+    line-height: var(--line-height);
+}
+
+main {
+    margin: 0 auto;
+}
+
+#bar{
+    width: 100%;
+    height: 8px;
+    left: 0;
+    z-index: 0;
+    background: var(--color-division);
+}
+
+/* ------- BANNER ------- */
+
+#banner {
+    position: relative;
+    margin-top: 5em;
+}
+
+#banner #container {
+    aspect-ratio: 24 / 9;
+    min-width: 400px;
+    max-width: calc(100vw - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    background: url('img/hero.png');
+    background-size: cover;
+    background-attachment: local;
+    background-position: bottom center;
+    background-blend-mode: overlay;
+    padding: 0 30px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-banner);
+}
+
+#container h1 {
+    margin-bottom: 2.5em;
+}
+
+#banner::before {
+    position: absolute;
+    left: 0;
+    bottom: 2.5em;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 357px 0 0 348px;
+    border-color: transparent transparent transparent var(--dark-blue-alpha-1);
+    content: "";
+}
+
+#banner::after {
+    position: absolute;
+    right: 0;
+    top: 2.5em;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 357px 348px 0;
+    border-color: transparent var(--dark-blue-alpha-2) transparent transparent;
+    content: "";
+}
+
+/* ------- ABOUT US ------- */
+
+/* ------- Information ------- */
+
+#about-us #information {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-top: 7.5em;
+}
+
+#about-us #information #left{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#about-us #information #left h2 {
+    font-weight: bold;
+    font-size: var(--text-size-big);
+    color: var(--dark-blue);
+    text-align: right;
+    padding: 0 2em;
+    margin: 0;
+    border: var(--light-blue);
+    border-width: 0 0 13px 0;
+    border-style: solid;
+    max-width: 375px;
+}
+
+#about-us #information #right{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    padding: 0.5em 0;
+}
+
+#about-us #information #right::before{
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-color: var(--dark-blue-alpha-0);
+    content: "";
+    z-index: 0;
+    mix-blend-mode: color-burn;
+}
+
+#about-us #information #right p {
+    width: 100%;
+    height: 100%;
+    font-size: var(--text-size-normal);
+    z-index: 1;
+    color: white;
+    padding: 3em 3em;
+    font-family: 'Gotham', sans-serif;
+    background-color: var(--light-blue);
+}
+
+#about-us #information p::before {
+    position: absolute;
+}
+
+/* ------- Vision & Mision ------- */
+
+#about-us #vision-mision {
+    min-height: 380px;
+    margin-top: 7.5em;
+    display: flex;
+    border-left: var(--dark-blue) 30px solid;
+    border-right: var(--light-blue) 30px solid;
+    background-color: white;
+    box-shadow: var(--shadow-general);
+}
+
+#about-us #vision-mision>div {
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    min-height: 220px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+#about-us #vision-mision>div h2{
+    font-family: 'Rubik', sans-serif;
+    font-size: var(--text-size-big);
+    font-weight: bold;
+}
+
+#about-us #vision-mision>div p{
+    width: 480px;
+    margin: 0 auto;
+    font-family: 'Gotham', sans-serif;
+    font-size: var(--text-size-normal);
+}
+
+#about-us #vision-mision #vision {
+    color: var(--dark-blue);
+}
+
+#about-us #vision-mision #mision {
+    color: var(--light-blue);
+}
+
+/* ------- SERVICES ------- */
+
+#services {
+    padding: 2em 0;
+    margin: 0;
+    margin-top: 7em;
+}
+
+#services .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 0.5em;
+}
+
+#services .card {
+    width: 25%;
+    max-width: 320px;
+    min-height: 500px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    margin: 0 0.5em;
+}
+
+#services .card h3 {
+    font-size: var(--text-size-big);
+    color: white;
+}
+
+#services .card.type-1 {
+    background-image: url('img/services_1.png');
+}
+
+#services .card.type-2 {
+    background-image: url('img/services_2.png');
+}
+
+#services .card.type-2 h3 {
+    color: var(--dark-blue);
+    position: relative;
+}
+
+#services .card.type-2 h3::after {
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    content: "";
+    z-index: 0;
+    background: var(--color-division);
+}
+
+#services .card.type-3 {
+    background-image: url('img/services_3.png');
+}
+
+#services .card.type-4 {
+    background-image: url('img/services_4.png');
+}
+
+/* ------- CLIENTS ------- */
+
+#clients {
+    padding: 2em 0;
+    margin: 0;
+    margin-top: 0em;
+}
+
+#clients .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    margin: 2.5em 0;
+    padding: 1.5em;
+    background-color: white;
+    height: 200px;
+    box-shadow: var(--shadow-general);
+}
+
+#clients .container img {
+    width:  auto;
+    filter: grayscale();
+}
+
+
+/* ------- CONTACT US ------- */
+
+#contact-us{
+    padding: 2em 0;
+    margin: 0;
+    margin-top: 1em;
+}
+
+#contact-us .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    padding: 1em 0;
+    position: relative;
+}
+
+#contact-us .container:before{
+    background-color: var(--dark-blue);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: color-burn;
+    z-index: -1;
+}
+
+#contact-us .container>div {
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: normal;
+}
+
+#contact-us .container #information ul{
+    list-style: none;
+    text-align: center;
+}
+
+#contact-us .container #information ul li:not(:first-child){
+    margin-top: 1.5em;
+}
+
+#contact-us .container #information ul li h3{
+    font-size: var(--text-size-normal);
+    font-weight: bold;
+    margin: 0;
+}
+
+#contact-us .container #information ul li label{
+    font-size: var(--text-size-normal);
+    margin-top: 5px;
+}
+
+#contact-us .container #information ul li i {
+    color: white;
+    font-size: var(--text-size-normal);
+    border-radius: 50%;
+    border: 10px solid var(--light-blue);
+    background-color: var(--light-blue);
+}
+
+#contact-us .container #form ul{
+    list-style: none;
+}
+
+#contact-us .container #form ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#contact-us .container #form ul li:not(:first-child){
+    margin-top: 1em;
+}
+
+#contact-us .container #form ul li.dual{
+    flex-direction: row;
+    gap: 2.5em;
+}
+
+#contact-us .container #form ul li.dual div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#contact-us .container #form ul label{
+    font-size: var(--text-size-normal);
+    font-weight: bold;
+}
+
+#contact-us .container #form ul input {
+    border: none;
+    font-size: var(--text-size-small);
+    height: 45px;
+    padding-left: .5em;
+    border-left: 12px solid var(--light-blue);
+    border-right: 12px solid var(--light-blue);
+    width: 100%;
+    mix-blend-mode: normal;
+}
+
+#contact-us .container #form ul textarea {
+    border: none;
+    font-size: var(--text-size-small);
+    padding: .5em;
+    width: 100%;
+    height: 115px;
+    resize: none;
+    border-left: 12px solid var(--light-blue);
+    border-right: 12px solid var(--light-blue);
+    mix-blend-mode: normal;
+}
+
+#contact-us .container #form ul input:focus,
+#contact-us .container #form ul textarea:focus {
+    outline: none;
+}
+
+#contact-us .container #form ul input:hover,
+#contact-us .container #form ul textarea:hover {
+    border: none;
+    border-left: 12px solid var(--light-blue);
+    border-right: 12px solid var(--light-blue);
+}
+
+#contact-us .container #form ul li button {
+    color: white;
+    background-color: var(--light-blue);
+    width: 150px;
+    height: 45px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+/* ------- HEADER ------- */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    background-image: url('img/bg.png');
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+nav .container #logo {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: flex-start;
+    align-items: center;
+    margin: .5em 0;
+    width: 50%;
+    padding-left: 5em;
+}
+
+nav .container #logo .certifications{
+    width: 75px;
+}
+
+nav .container ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding: 0;
+}
+
+nav .container ul li {
+    text-align: center;
+    padding: 0.5em;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .container ul li a {
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-size: var(--text-size-normal);
+    font-weight: 450;
+}
+
+nav .container ul li:hover {
+    color: white;
+    background-color: var(--dark-blue);
+    border-left: 5px solid var(--light-blue);
+    border-right: 5px solid var(--light-blue);
+}
+
+nav .container ul li:hover a {
+    color: white;
+}
+
+
+nav .container #menu-icon{
+    display: none;
+}
+
+nav .container #menu-icon a{
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-size: var(--text-size-normal);
+    font-weight: bold;
+}
+
+nav .container #menu-icon a:hover{
+    color: var(--dark-blue);
+}
+
+#slideout-menu {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 65px;
+    width: 100vw;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+#slideout-menu.toggle-on {
+    max-height: 500px;
+}
+
+#slideout-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    padding: 2em 0;
+}
+
+#slideout-menu ul li {
+    margin-bottom: 1em;
+}
+
+#slideout-menu ul li a {
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+
+
+/* ------- FOOTER ------- */
+
+footer{
+    margin-bottom: 0;
+    margin-top: 2em;
+    background-color: white;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2em 0;
+}
+
+footer .container .certifications{
+    width: 75px;
+}
+
+/* ------- RESPONSIVE ------- */
+
+/* ------- Standard Screen ----- */
+
+@media screen and (max-width: 1920px) {
+
+    :root {
+        --banner-text-size: 45px;
+        --text-size-big: 30px;
+        --text-size-normal: 18px;
+        --text-size-small: 16px;
+    }
+    
+    /* ------- Banner Triangles ----- */
+
+    #banner::before {
+        border-width: 307px 0 0 298px;
+    }
+    
+    #banner::after {
+        border-width: 0 307px 298px 0;
+    }
+
+    /* ------- Client Logos ----- */
+
+    #clients .container img.logo-1 {
+        height:  115px;
+    }
+    
+    #clients .container img.logo-2 {
+        height:  70px;
+    }
+    
+    #clients .container img.logo-3 {
+        height:  50px;
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+    nav .container ul {
+        margin: 0 3em;
+    }
+}
+
+/* ------- Small Screen ----- */
+
+@media screen and (max-width: 1280px) {
+
+    /* ------- Variables ----- */
+
+    :root {
+        --banner-text-size: 35px;
+        --text-size-big: 25px;
+        --text-size-normal: 16px;
+        --text-size-small: 14px;
+    }
+
+    /* ------- Banner Triangles ----- */
+
+    #banner::before {
+        border-width: 197px 0 0 188px;
+    }
+    
+    #banner::after {
+        border-width: 0 197px 188px 0;
+    }
+
+    /* ------- Client Logos ----- */
+
+    #clients .container img.logo-1 {
+        height:  115px;
+    }
+    
+    #clients .container img.logo-2 {
+        height:  70px;
+    }
+    
+    #clients .container img.logo-3 {
+        height:  50px;
+    }
+
+    /* ------- Header ----- */
+
+    nav .container #logo .certifications{
+        width: 60px;
+    }
+
+    /* ------- Footer ----- */
+
+    footer .container .certifications{
+        width: 60px;
+    }
+}
+
+/* ------- Landscape Tablet ----- */
+
+@media screen and (max-width: 1080px) {
+
+    /* ------- Banner ----- */
+
+    #banner #container h1 {
+        margin-bottom: 1.5em;
+    }
+
+    #banner #container {
+        max-width: calc(100vw - 100px);
+        background-attachment: local;
+    }
+
+    #banner::before {
+        border-width: 107px 0 0 98px;
+        bottom: 1em;
+    }
+    
+    #banner::after {
+        border-width: 0 107px 98px 0;
+        top: 1em;
+    }
+
+    /* ------- Contact Us ----- */
+
+    #contact-us .container #information {
+        width: 30%;
+    }
+
+    /* ------- Header ----- */
+
+    nav .container #logo .certifications{
+        width: 60px;
+        display: none;
+    }
+
+    /* ------- Footer ----- */
+
+    footer .container .certifications{
+        width: 50px;
+    }
+}
+
+/* ------- Tablet ----- */
+
+@media screen and (max-width: 1024px) {
+
+    /* ------- Variables ----- */
+
+    :root {
+        --banner-text-size: 30px;
+        --text-size-big: 25px;
+        --text-size-normal: 16px;
+        --text-size-small: 14px;
+        --text-size-card: 22px;
+    }
+
+    /* ------- General ----- */
+
+    .section-heading {
+        font-size: var(--text-size-big);
+        padding: 0 0 0 3.5em;
+    }
+    
+    .section-heading::before {
+        width: 70px;
+        height: 10px;
+    }
+
+    /* ------- Header ----- */
+
+    nav {
+        background-size: cover;
+    }
+
+    nav .container {
+        position: relative;
+    }
+
+    nav .container #logo img:first-child {
+        width: 180px;
+    }  
+
+    nav .container #menu-icon {
+        display: flex;
+        width: 50%;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1em 2em;
+    }
+
+    nav .container ul {
+        display: none;
+    }
+    
+    nav .container ul li {
+        display: none;
+    }
+
+    #slideout-menu {
+        display: block;
+    }
+
+    /* ------- Banner ----- */
+
+    #banner {
+        margin-top: 2em;
+    }
+
+    #banner #container h1 {
+        margin-bottom: 1.5em;
+    }
+
+    #banner #container {
+        max-width: calc(100vw - 100px);
+        background-attachment: local;
+    }
+
+    #banner::before {
+        border-width: 107px 0 0 98px;
+        bottom: 1em;
+    }
+    
+    #banner::after {
+        border-width: 0 107px 98px 0;
+        top: 1em;
+    }
+
+    /* ------- About US ----- */
+
+    #about-us #information {
+        margin-top: 3em;
+    }
+
+    #about-us #vision-mision {
+        margin-top: 3em;
+    }
+
+    #about-us #vision-mision>div p{
+        width: 80%;
+    }
+
+    /* ------- Services ----- */
+
+    #services {
+        margin-top: 3em;
+    }
+
+    #services .card {
+        min-height: 350px;
+    }
+
+    #services .card h3 {
+        font-size: var(--text-size-card);
+        color: white;
+    }
+
+    /* ------- Clients ----- */
+
+    #clients {
+        margin-top: 0em;
+        padding: 0;
+    }
+
+    #clients .container {
+        gap: 1em;
+    }
+
+    #clients .container img.logo-1 {
+        height:  115px;
+    }
+    
+    #clients .container img.logo-2 {
+        height:  65px;
+    }
+    
+    #clients .container img.logo-3 {
+        height:  55px;
+    }
+
+    /* ------- Contact Us ----- */
+
+    #contact-us .container #information {
+        width: 40%;
+    }
+
+    #contact-us .container #form ul{
+        padding: 0;
+    }
+
+    #contact-us .container #form ul li button {
+        width: 120px;
+        height: 35px;
+        font-size: var(--text-size-normal);
+    }
+
+
+    /* ------- Footer ----- */
+
+    footer .container img{
+        width: 180px;
+    }
+}
+
+/* ------- Big Mobile ----- */
+
+@media screen and (max-width: 768px) {
+
+    /* ------- Variables ----- */
+
+    :root {
+        --banner-text-size: 30px;
+        --text-size-big: 25px;
+        --text-size-normal: 16px;
+        --text-size-small: 14px;
+        --text-size-card: 22px;
+    }
+
+    /* ------- About Us ----- */
+
+    #about-us #information {
+        flex-direction: column;
+    }
+
+    #about-us #information #left {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    #about-us #information #left h2 {
+        padding: 0 1.5em;
+        margin: 1em 0;
+        border: none;
+        position: relative;
+    }
+
+    #about-us #information #left h2::before {
+        width: 20px;
+        height: 7px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: var(--light-blue);
+        content: "";
+        z-index: 0;
+    }
+
+    #about-us #information #right {
+        width: 100%;
+    }
+
+    #about-us #vision-mision {
+        border-left: var(--dark-blue) 15px solid;
+        border-right: var(--light-blue) 15px solid;
+    }
+}   
+
+/* ------- Small Mobile ----- */
+
+@media screen and (max-width: 600px) {
+
+    /* ------- Variables ----- */
+
+    :root {
+        --banner-text-size: 22px;
+        --text-size-big: 18px;
+        --text-size-normal: 14px;
+        --text-size-small: 12px;
+        --text-size-card: 16px;
+    }
+
+    /* ------- General ----- */
+
+    .section-heading {
+        font-size: var(--text-size-big);
+        padding: 0 0 0 1.5em;
+    }
+    
+    .section-heading::before {
+        width: 20px;
+        height: 7px;
+    }
+
+    /* ------- Header ----- */
+
+    nav .container #logo {
+        margin: .5em 0;
+        padding-left: 2em;
+    }
+
+    nav .container #logo img:nth-child(2) {
+        display: none;
+    } 
+
+    /* ------- Banner ----- */
+
+    #banner #container {
+        max-width: calc(100vw - 70px);
+        min-width: 0;
+        height: 200px;
+        background-attachment: local;
+    }
+
+    #banner::before {
+        border-width: 67px 0 0 58px;
+        bottom: 1em;
+    }
+    
+    #banner::after {
+        border-width: 0 67px 58px 0;
+        top: 1em;
+    }
+
+    #banner #container h1 {
+        margin-bottom: 1.5em;
+    }
+
+    /* ------- About Us ----- */
+
+    #about-us #vision-mision {
+        flex-direction: column;
+        padding: 2em 0;
+    }
+
+    #about-us #vision-mision>div {
+        width: 90%;
+    }
+
+    /* ------- Services ----- */
+
+    #services .container {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    
+    #services .card {
+        width: 45%;
+        margin: 0.5em;
+        min-height: 270px;
+    }
+
+    /* ------- Clients ----- */
+
+    #clients .container {
+        gap: 0;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #clients .container img.logo-1{
+        height:  95px;
+    }
+    
+    #clients .container img.logo-2{
+        height:  55px;
+    }
+
+    #clients .container img.logo-3 {
+        height:  35px;
+    }
+
+    /* ------- Contact Us ----- */
+
+    #contact-us .container #form {
+        width: 80%;
+    }
+
+    #contact-us .container #form form ul {
+        width: 100%;
+    }
+
+    #contact-us .container {
+        flex-direction: column-reverse;
+    }
+
+    #contact-us .container #information ul {
+        padding: 0;
+    }
+
+    #contact-us .container #form ul li:last-child {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact-us .container #form ul li button {
+        text-align: center;
+        margin: auto;
+    }
+
+    #contact-us .container #form ul li.dual {
+        flex-direction: column;
+        gap: 0.75em;
+    }
+
+    #contact-us .container #form ul input,
+    #contact-us .container #form ul textarea {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* ------- Footer ----- */
+
+    footer .container img{
+        width: 150px;
+    }
+}
